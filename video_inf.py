@@ -6,4 +6,4 @@ detector = Detector(model_name='rapid', weights_path='./weights/pL1_MWHB1024_Mar
 #detector.detect_one(img_path='./images/exhibition.jpg', input_size=1024, conf_thres=0.3, visualize=True)
 
 #Run a video partintioned into frames
-detector.detect_imgSeq('~/scratch/video.mp4', input_size, conf_thres=0.3)
+detector.detect_imgSeq('~/scratch/frames', input_size=1920, conf_thres=0.3)
