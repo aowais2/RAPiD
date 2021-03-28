@@ -136,15 +136,13 @@ class Detector():
         if kwargs.get('debug', False):
             np_img = np.array(input_img)
             visualization.draw_dt_on_np(np_img, dts)
-            plt.imshow(np_img)
-            plt.show()
+            #plt.imwrite('',np_img)
         dts = utils.nms(dts, is_degree=True, nms_thres=0.45, img_size=input_size)
         dts = utils.detection2original(dts, pad_info.squeeze())
         if kwargs.get('debug', False):
             np_img = np.array(pil_img)
             visualization.draw_dt_on_np(np_img, dts)
-            plt.imshow(np_img)
-            plt.show()
+            #plt.imwrite('',np_img)
         return dts
 
 
